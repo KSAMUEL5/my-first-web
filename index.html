@@ -202,46 +202,6 @@
   </section>
 
 
-  <section id="rate" aria-label="Rate Me">
-    <h1>Rate Me</h1>
-    <form id="rateForm" aria-describedby="reviewListLabel">
-      
-      <input
-        id="name"
-        name="name"
-        type="text"
-        required
-        placeholder="Your name"
-        aria-required="true"
-      />
-
-      
-      <select id="stars" name="stars" required aria-required="true">
-        <option value="" disabled selected>Select rating</option>
-        <option value="1">1 star</option>
-        <option value="2">2 stars</option>
-        <option value="3">3 stars</option>
-        <option value="4">4 stars</option>
-        <option value="5">5 stars</option>
-      </select>
-
-      
-      <textarea
-        id="review"
-        name="review"
-        rows="4"
-        placeholder="Write your review"
-        required
-        aria-required="true"
-      ></textarea>
-
-      <button type="submit">Submit Review</button>
-    </form>
-
-    <h2 id="reviewListLabel" style="margin-top: 2rem;">Reviews:</h2>
-    <div id="reviews"></div>
-  </section>
-
   <section id="contact" aria-label="Contact Me" class="neon-contact">
   <h1>Contact Me</h1>
   <div class="contact-wrapper">
@@ -251,7 +211,10 @@
       <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> +250 787 599 571</p>
       <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong>Kigali-Rwanda</p>
     </div>
-    <form id="contactForm" novalidate>
+    <form action="https://formspree.io/f/xrbkejpp" id="contactForm" method="POST">
+      <input type="hidden" name="_next" value="https://k-samuel.netlify.app/thank-you.html" />
+
+
       <div class="input-group">
         <input type="text" id="name" name="name" required autocomplete="off" />
         <label for="name" class="label">Name</label>
